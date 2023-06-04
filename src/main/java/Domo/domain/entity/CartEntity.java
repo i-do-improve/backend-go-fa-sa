@@ -1,10 +1,12 @@
 package Domo.domain.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -35,6 +37,6 @@ public class CartEntity{
     private MemberEntity member_id; //회원 번호
 	
 	@JoinColumn //Cat_item_id
-    @OneToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private CartEntity Cat_item_id; //고양이 사진 상품 번호
 }
