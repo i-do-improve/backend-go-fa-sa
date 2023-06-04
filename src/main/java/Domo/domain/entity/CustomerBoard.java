@@ -1,16 +1,6 @@
 package Domo.domain.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -42,8 +32,10 @@ public class CustomerBoard extends BaseDateEntity{
     private BoardType type; //문의글 종류  결제문의/구독문의/기타문의
 	
 	@JoinColumn
-    @ManyToOne(fetch = FetchType.EAGER)
-    private MemberEntity memId; //작성자 회원 번호
+    @ManyToOne(cascade = CascadeType.DETACH)
+    private MemberEntity memId; // 작성자 회원 번호
+
+
 	
 	
 }
