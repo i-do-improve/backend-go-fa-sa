@@ -30,6 +30,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @Table(name = "member")
 @Entity
+
 public class MemberEntity extends BaseDateEntity{
 	
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
