@@ -1,5 +1,6 @@
 package Domo.domain.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -37,6 +38,6 @@ public class CartEntity{
     private MemberEntity member_id; //회원 번호
 	
 	@JoinColumn //Cat_item_id
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.DETACH)
     private CartEntity Cat_item_id; //고양이 사진 상품 번호
 }
