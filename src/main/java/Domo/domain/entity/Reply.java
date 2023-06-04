@@ -25,11 +25,11 @@ public class Reply extends BaseDateEntity{
     private String content;    // 댓글 내용
 
     @JoinColumn
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.DETACH)
     private MemberEntity Id; // 게시글 번호
 
     @JoinColumn
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.DETACH)
     private MemberEntity member_Id; // 작성자 회원 번호
 
 
