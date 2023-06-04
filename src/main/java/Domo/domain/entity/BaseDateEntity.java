@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 public class BaseDateEntity {
     @CreationTimestamp
-    private LocalDateTime createdDate;  //생성일
+    private LocalDateTime createdDate;  //생성날짜
     @UpdateTimestamp
-    private LocalDateTime updatedDate;  //수정일
+    private LocalDateTime updatedDate;  //수정날짜
 }

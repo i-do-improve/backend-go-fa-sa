@@ -35,14 +35,15 @@ public class MemberEntity extends BaseDateEntity{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private long id;   //회원번호
+	
 	@Column(unique = true,nullable = false)   //unique not null
     private String email;   //username - 이메일
 
+	@Column(unique = true)
+    private String nickName; //닉네임
+	
     @Column(nullable = false)   //not null
     private String pass;    //비밀번호
-
-    @Column(unique = true)
-    private String nickName; //닉네임
 
     private boolean social;     // 소셜유저여부
     private boolean field ;    // 구독여부
@@ -58,6 +59,10 @@ public class MemberEntity extends BaseDateEntity{
     //role적용을 위한 편의메서드
     public MemberEntity addRole(Roles role){
         this.roles.add(role);
+        return this;
+    }
+    public MemberEntity removeRole(Roles role){
+        this.roles.remove(role);
         return this;
     }
 
