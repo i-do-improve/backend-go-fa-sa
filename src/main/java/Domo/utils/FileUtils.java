@@ -22,7 +22,7 @@ public class FileUtils {
 		}
 	}
 	
-	//임시 서장한 파일을 분리하여 저장
+	//임시 저장한 파일을 분리하여 저장
 	public static Map<String, String> fileUpload(MultipartFile gimg, String location) {
 		
 		ClassPathResource cpr = new ClassPathResource("static"+location); //이 위치에 파일을 업로드
@@ -58,5 +58,5 @@ public class FileUtils {
 		return tempfile;
 	}
 	
-	private FileUtils() {} //생성자 막아버리기
+	private FileUtils() {} //생성자 막기
 }
