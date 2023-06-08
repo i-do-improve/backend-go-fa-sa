@@ -22,13 +22,13 @@ public class OrderEntity extends BaseDateEntity{
     private long id;   // 주문번호
 
     @Column(nullable = false)
-    private long order_status; //주문상태
+    private long status; // 주문상태 : 주문대기 0 주문완료 1 주문취소 2
 
     @Column(nullable = false)
     private long count;    // 총주문수량
 
     @Column(nullable = false)
-    private long price;    // 총주문금
+    private long price;    // 총주문금액
 
     @JoinColumn
     @ManyToOne(cascade = CascadeType.DETACH)
