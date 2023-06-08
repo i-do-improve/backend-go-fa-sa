@@ -34,5 +34,5 @@ public class CategoryEntity {
 	
 	@JoinColumn //fk : parent_id
     @ManyToOne     								
-    private DetailCategoryEntity parent; //상위 카테고리
+    private CategoryEntity parent; //상위 카테고리
 }
