@@ -26,11 +26,11 @@ public class ReviewEntity extends BaseDateEntity{
 
     @JoinColumn
     @ManyToOne(cascade = CascadeType.DETACH)
-    private MemberEntity member_id;
+    private MemberEntity member;
 
     @JoinColumn
     @ManyToOne(cascade = CascadeType.DETACH)
-    private CatItemEntity cat_item_id;
+    private CatItemEntity cat_item;
 
 
 }

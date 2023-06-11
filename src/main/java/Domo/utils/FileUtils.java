@@ -23,6 +23,11 @@ public class FileUtils {
 	}
 	
 	//임시 저장한 파일을 분리하여 저장
+	/**
+	 * @param gimg
+	 * @param location
+	 * @return
+	 */
 	public static Map<String, String> fileUpload(MultipartFile gimg, String location) {
 		
 		ClassPathResource cpr = new ClassPathResource("static"+location); //이 위치에 파일을 업로드

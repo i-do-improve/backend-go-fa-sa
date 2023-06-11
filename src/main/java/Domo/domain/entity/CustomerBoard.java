@@ -33,7 +33,7 @@ public class CustomerBoard extends BaseDateEntity{
 	
 	@JoinColumn
     @ManyToOne(cascade = CascadeType.DETACH)
-    private MemberEntity member_id; //작성자 회원 번호
+    private MemberEntity member; //작성자 회원 번호
 	
 	
 }

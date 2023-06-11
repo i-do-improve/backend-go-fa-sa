@@ -2,7 +2,6 @@ package Domo.domain.entity;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,7 +22,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Table(name = "Cart")
+@Table(name = "cart")
 @Entity
 public class CartEntity{
 
@@ -35,9 +34,9 @@ public class CartEntity{
 	
 	@JoinColumn //member_id
     @OneToOne
-    private MemberEntity member_id; //회원 번호
+    private MemberEntity member; //회원 번호
 	
 	@JoinColumn //Cat_item_id
     @ManyToOne(cascade = CascadeType.DETACH)
-    private CartEntity Cat_item_id; //고양이 사진 상품 번호
+    private CartEntity cat_item; //고양이 사진 상품 번호
 }
