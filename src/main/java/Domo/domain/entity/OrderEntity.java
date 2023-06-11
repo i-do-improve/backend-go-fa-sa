@@ -32,11 +32,11 @@ public class OrderEntity extends BaseDateEntity{
 
     @JoinColumn
     @ManyToOne(cascade = CascadeType.DETACH)
-    private MemberEntity member_id; // 회원번호
+    private MemberEntity member; // 회원번호
 
     @JoinColumn
     @ManyToOne(cascade = CascadeType.DETACH)
-    private CatItemEntity item_id; // 상품번호
+    private CatItemEntity item; // 상품번호
 
 
 

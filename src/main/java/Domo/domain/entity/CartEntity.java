@@ -34,9 +34,9 @@ public class CartEntity{
 	
 	@JoinColumn //member_id
     @OneToOne
-    private MemberEntity member_id; //회원 번호
+    private MemberEntity member; //회원 번호
 	
 	@JoinColumn //Cat_item_id
     @ManyToOne(cascade = CascadeType.DETACH)
-    private CartEntity Cat_item_id; //고양이 사진 상품 번호
+    private CartEntity Cat_item; //고양이 사진 상품 번호
 }
