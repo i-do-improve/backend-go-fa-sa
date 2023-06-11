@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Table(name = "Cat_item")
+@Table(name = "cat_item")
 @Entity
 public class CatItemEntity extends BaseDateEntity{
 

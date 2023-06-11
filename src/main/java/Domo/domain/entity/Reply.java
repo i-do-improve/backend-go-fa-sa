@@ -19,14 +19,14 @@ public class Reply extends BaseDateEntity{
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private long key; // 댓글 번호
+    private long id; // 댓글 번호
 
     @Column(nullable = false)
     private String content;    // 댓글 내용
 
     @JoinColumn
     @ManyToOne(cascade = CascadeType.DETACH)
-    private MemberEntity Id; // 게시글 번호
+    private CustomerBoard board; // 게시글 번호
 
     @JoinColumn
     @ManyToOne(cascade = CascadeType.DETACH)

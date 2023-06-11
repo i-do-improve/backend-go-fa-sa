@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Table(name = "Cart")
+@Table(name = "cart")
 @Entity
 public class CartEntity{
 
@@ -38,5 +38,5 @@ public class CartEntity{
 	
 	@JoinColumn //Cat_item_id
     @ManyToOne(cascade = CascadeType.DETACH)
-    private CartEntity Cat_item; //고양이 사진 상품 번호
+    private CartEntity cat_item; //고양이 사진 상품 번호
 }
