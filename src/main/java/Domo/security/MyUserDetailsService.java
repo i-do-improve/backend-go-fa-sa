@@ -20,7 +20,8 @@ public class MyUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         log.info(">>>>>login page: email -> username ::::: "+username);
-        MemberEntity entity =  (MemberEntity) repo.findByEmailAndSocialAndField(username,false,false);
+        MemberEntity entity = repo.findByEmailAndSocialAndField(username,false,false)
+        		.orElseThrow(() -> new UsernameNotFoundException("존재하지 않는 이메일"));
 
 
         return new MyUserDetails(entity);
